@@ -1,5 +1,5 @@
-app.controller('MainController', function ($scope, FlashCardsFactory) {
-	$scope.flashCards = FlashCardsFactory;
+app.controller('MainController', function ($scope, whateverName) {
+	$scope.flashCards = whateverName;
 
 	$scope.answerQuestion = function (answer, flashCard) {
 		if (!flashCard.answered) {
