@@ -8,12 +8,15 @@ app.controller('MainController', function ($scope,FlashCardsFactory) {
 		}
 	}
 
-	    $scope.getAllCards = function () {
+	   /* $scope.getAllCards = function () {
         $scope.currentCategory = null;
         FlashCardsFactory.getFlashCards().then(function (cards) {
             $scope.flashCards = cards;
         });
-    };
+    };*/
 
-    $scope.getAllCards();
+
+
+
+
 });
