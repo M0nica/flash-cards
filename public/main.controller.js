@@ -1,5 +1,7 @@
-app.controller('MainController', function ($scope,FlashCardsFactory) {
-	$scope.flashCards = FlashCardsFactory;
+app.controller('MainController', function ($scope, FlashCardsFactory, whateverName) {
+
+	$scope.flashCards = whateverName;
+
 
 	$scope.answerQuestion = function (answer, flashCard) {
 		if (!flashCard.answered) {
@@ -8,15 +10,14 @@ app.controller('MainController', function ($scope,FlashCardsFactory) {
 		}
 	}
 
-	   /* $scope.getAllCards = function () {
-        $scope.currentCategory = null;
-        FlashCardsFactory.getFlashCards().then(function (cards) {
-            $scope.flashCards = cards;
-        });
-    };*/
+	$scope.categories = [
+		'MongoDB',
+		'Express',
+		'Angular',
+		'Node'
+	];
 
-
-
-
-
+	$scope.getCategoryCards = function(category) {
+		$scope.flashCards = FlashCardsFactory.getFlashCards();
+	}
 });
