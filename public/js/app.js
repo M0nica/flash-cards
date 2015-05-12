@@ -28,35 +28,35 @@ app.value('whateverName', [
     }
 ]);
 
-// app.factory('FlashCardsFactory', function ($http) {
+app.factory('FlashCardsFactory', function ($http) {
 
-//     return {
+    return {
 
-//         getFlashCards: function (category) {
+        getFlashCards: function (category) {
 
-//             var queryParams = {};
+            var queryParams = {};
 
-//             if (category) {
-//                 queryParams.category = category;
-//             }
+            if (category) {
+                queryParams.category = category;
+            }
 
-//             return $http.get('/cards', {
-//                 params: queryParams
-//             }).then(function (response) {
-//                 return response.data;
-//             });
+            return $http.get('/cards', {
+                params: queryParams
+            }).then(function (response) {
+                return response.data;
+            });
 
-//         }
+        }
 
-//     };
+    };
 
-// });
+});
 
-// app.factory('ScoreFactory', function () {
+app.factory('ScoreFactory', function () {
 
-//     return {
-//         correct: 0,
-//         incorrect: 0
-//     };
+    return {
+        correct: 0,
+        incorrect: 0
+    };
 
-// });
+});
